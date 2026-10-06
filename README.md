@@ -80,7 +80,7 @@ $$\text{Device Senses Descriptors} \longrightarrow \text{Core Engine Matches Pre
 
 ### 1. Clone & Install
 ```bash
-git clone https://github.com/your-username/wildcase.git
+git clone https://github.com/Himanshu0250/WILDCASE.git
 cd wildcase
 pnpm install
 ```
