@@ -9,7 +9,7 @@
 
 ---
 
-## 🌟 What is WILDCASE?
+##  What is WILDCASE?
 
 WILDCASE is an outdoor detective adventure where the player's physical environment is the game board and their mobile device is an intermittent field sensor instrument.
 
@@ -31,7 +31,7 @@ $$\text{Device Senses Descriptors} \longrightarrow \text{Core Engine Matches Pre
 
 ---
 
-## ✨ Core Features
+##  Core Features
 
 1. **Cinematic Detective Field Journal UI**: Tactile physical evidence dossier aesthetic with editorial serif typography (Fraunces), technical monospace rules (JetBrains Mono), and animated stamps.
 2. **Signature Field Mode**: Ultra-minimalist dark HUD with a single breathing sonar indicator engineered to keep your phone in your pocket while you walk.
@@ -43,7 +43,7 @@ $$\text{Device Senses Descriptors} \longrightarrow \text{Core Engine Matches Pre
 
 ---
 
-## 🏛 System Architecture
+##  System Architecture
 
 ```
 [ PHYSICAL WORLD ] ── (Observation & Walk) ──► [ WILDCASE CLIENT (PWA / React 19) ]
@@ -69,7 +69,7 @@ $$\text{Device Senses Descriptors} \longrightarrow \text{Core Engine Matches Pre
 
 ---
 
-## 🚀 Quickstart & Local Development
+##  Quickstart & Local Development
 
 ### Prerequisites
 - Node.js `>= 20.0.0`
@@ -106,13 +106,13 @@ pnpm field-test
 
 ---
 
-## 🔒 Privacy & Data Sovereignty
+##  Privacy & Data Sovereignty
 
 WILDCASE processes all camera video frames locally in device memory. **Zero user photos or location coordinates are uploaded to remote servers.** Review our [`docs/DATA_PRIVACY.md`](docs/DATA_PRIVACY.md) and [`docs/VISION_PIPELINE.md`](docs/VISION_PIPELINE.md) for full details.
 
 ---
 
-## 📚 Technical Documentation
+##  Technical Documentation
 
 - [`docs/GAMEPLAY_LOOP.md`](docs/GAMEPLAY_LOOP.md) — 10-step player journey, state machine matrix, and suspect alibi logic.
 - [`docs/VISION_PIPELINE.md`](docs/VISION_PIPELINE.md) — On-device vision pipeline, Sobel gradients, and frame quality checking.
@@ -128,5 +128,5 @@ WILDCASE processes all camera video frames locally in device memory. **Zero user
 
 ---
 
-## 📄 License
+##  License
 MIT © 2026 WILDCASE Contributors
