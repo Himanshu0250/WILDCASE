@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --sat: env(safe-area-inset-top, 0px);
+    --sar: env(safe-area-inset-right, 0px);
+    --sab: env(safe-area-inset-bottom, 0px);
+    --sal: env(safe-area-inset-left, 0px);
+  }
+
+  body {
+    padding-top: var(--sat);
+    padding-bottom: var(--sab);
+    padding-left: var(--sal);
+    padding-right: var(--sar);
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* Tactile Detective Journal & Grain effects */
+.bg-grain {
+  background-image: radial-gradient(rgba(223, 159, 40, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+.paper-texture {
+  background-color: #f3ebd7;
+  color: #1e1c18;
+  background-image: 
+    linear-gradient(rgba(30, 28, 24, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(30, 28, 24, 0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+  box-shadow: 
+    0 1px 3px rgba(0,0,0,0.4),
+    0 10px 25px -5px rgba(0,0,0,0.5),
+    inset 0 0 40px rgba(180, 150, 100, 0.2);
+}
+
+.stamp-effect {
+  border: 3px solid #c23b2d;
+  color: #c23b2d;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  transform: rotate(-6deg);
+  box-shadow: 0 0 0 1px rgba(194, 59, 45, 0.2);
+  display: inline-block;
+  mask-image: linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 100%);
+}
+
+.stamp-solved {
+  border: 3px solid #467458;
+  color: #467458;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  transform: rotate(-4deg);
+  display: inline-block;
+}
+
+/* Custom Tactical Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0e11;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a313d;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #df9f28;
+}
+
+/* Touch targets and smooth transitions */
+button, a {
+  min-height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.touch-action-none {
+  touch-action: none;
+}

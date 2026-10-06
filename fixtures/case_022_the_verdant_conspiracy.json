@@ -1,0 +1,150 @@
+{
+  "id": "case-022",
+  "caseNumber": "CASE 022",
+  "title": "The Verdant Conspiracy",
+  "tagline": "A poisoned botanical reserve. Three botanists. One chemical trail.",
+  "atmosphere": "Breezy afternoon in a nature preserve, rustling leaves, birdcalls.",
+  "environmentType": "suburban_trail",
+  "premise": "A rare stand of historic redwoods was contaminated with an illegal synthetic growth inhibitor. Field investigators must trace the culprit's footsteps along the park trail.",
+  "estimatedMinutes": 25,
+  "difficulty": "3",
+  "suspects": [
+    {
+      "id": "suspect-a",
+      "name": "Dr. Helena Shaw",
+      "occupation": "Arborist Researcher",
+      "badgeTag": "SUSPECT A",
+      "avatarSymbol": "tree",
+      "motive": "Seeking to prove her patented biological antidote is the only savior for the forest.",
+      "alibi": "Claims she was lecturing students in the park amphitheater.",
+      "traits": ["Carries leather notebook", "Wears canvas field gaiters", "Smells of cedar oil"],
+      "hiddenTrait": "Uses synthetic copper-sulfate blue dye markers on all test specimens.",
+      "eliminationClue": "Beat 3 proves the chemical canister used an alkaline yellow indicator, not Helena's acidic blue tracer."
+    },
+    {
+      "id": "suspect-b",
+      "name": "Marcus Kane",
+      "occupation": "Timber Development Surveyor",
+      "badgeTag": "SUSPECT B",
+      "avatarSymbol": "compass",
+      "motive": "If the grove dies, zoning permits clearing the parcel for luxury townhomes.",
+      "alibi": "Claims he was surveying the northern highway overpass.",
+      "traits": ["Heavy surveyor tripod", "Wears yellow reflective armbands", "Chews spearmint gum"],
+      "hiddenTrait": "Carries concentrated glyphosate canisters sealed with bright yellow silicone caps.",
+      "eliminationClue": "None — his yellow cap seals and surveyor stakes match the crime scene precisely."
+    },
+    {
+      "id": "suspect-c",
+      "name": "Rowan Finch",
+      "occupation": "Organic Beekeeper",
+      "badgeTag": "SUSPECT C",
+      "avatarSymbol": "sun",
+      "motive": "Furious that the park service sprayed mosquito foggers near his hives.",
+      "alibi": "Claims he was tending hives near the south meadow creek.",
+      "traits": ["Wears mesh bee veil", "Hands stained with honeycomb wax", "Smells of beeswax"],
+      "hiddenTrait": "Always leaves trails of natural unrefined pine smoke when working outdoors.",
+      "eliminationClue": "Beat 2 proves no organic smoke residue was present, only industrial synthetic petroleum solvent."
+    }
+  ],
+  "culpritId": "suspect-b",
+  "beats": [
+    {
+      "id": "beat-01",
+      "beatNumber": 1,
+      "title": "The Trail Marker",
+      "prompt": "Locate an outdoor trail marker, wooden post, or park boundary sign.",
+      "fieldInstruction": "Pocket your phone. Follow the walking trail until you spot a trail post or directional sign.",
+      "targetPredicate": {
+        "id": "pred-01",
+        "name": "Trail Marker Post",
+        "targetCategory": "path_marker",
+        "requiredDescriptors": ["wood", "vertical"],
+        "optionalDescriptors": ["post", "marker", "trail", "sign", "boundary"],
+        "minimumMatchScore": 0.5,
+        "safetyNotice": "Only observe objects in open, public, accessible areas. Never trespass."
+      },
+      "hintLevels": {
+        "level1": "Search along the walking path for an upright post guiding visitors.",
+        "level2": "Look for a wooden signpost or trail distance marker.",
+        "level3": "Inspect the base of a wooden trail stake where the path forks."
+      },
+      "clueCardTitle": "Surveyor Prism Notch",
+      "narrativeRevelation": "A fresh triangular notch was carved into the trail post to mount a high-precision surveyor prism.",
+      "eliminatedSuspectIds": []
+    },
+    {
+      "id": "beat-02",
+      "beatNumber": 2,
+      "title": "The Living Bark",
+      "prompt": "Locate a tree trunk, large branch, or living plant stalk.",
+      "fieldInstruction": "Put phone away. Walk 30 paces and locate a mature tree trunk.",
+      "targetPredicate": {
+        "id": "pred-02",
+        "name": "Tree Trunk Bark Surface",
+        "targetCategory": "organic_matter",
+        "requiredDescriptors": ["organic", "rough"],
+        "optionalDescriptors": ["bark", "tree", "wood", "trunk", "nature"],
+        "minimumMatchScore": 0.5,
+        "safetyNotice": "Only observe objects in open, public, accessible areas. Never trespass."
+      },
+      "hintLevels": {
+        "level1": "Find a mature tree with deep furrowed bark.",
+        "level2": "Look closely at the texture of tree bark about chest high.",
+        "level3": "Check the trunk of a tree standing close to the path."
+      },
+      "clueCardTitle": "Synthetic Solvent Spray Pattern",
+      "narrativeRevelation": "Chemical analysis reveals petroleum-based solvent spray, ruling out Rowan Finch's natural organic beekeeper smoke.",
+      "eliminatedSuspectIds": ["suspect-c"]
+    },
+    {
+      "id": "beat-03",
+      "beatNumber": 3,
+      "title": "The Color Anomaly",
+      "prompt": "Locate a distinct yellow or bright colored object/surface outdoors.",
+      "fieldInstruction": "Phone in pocket. Scan for a vivid yellow or high-contrast accent in your surroundings.",
+      "targetPredicate": {
+        "id": "pred-03",
+        "name": "Vivid Yellow Accent",
+        "targetCategory": "color_anomaly",
+        "requiredDescriptors": ["yellow", "bright"],
+        "optionalDescriptors": ["plastic", "cap", "tape", "paint", "accent"],
+        "minimumMatchScore": 0.5,
+        "safetyNotice": "Only observe objects in open, public, accessible areas. Never trespass."
+      },
+      "hintLevels": {
+        "level1": "Scan the landscape for a pop of synthetic yellow color.",
+        "level2": "Look for yellow warning paint, a plastic ribbon, or a safety marker.",
+        "level3": "Check around ground level or fixtures for a yellow tag or plastic fitting."
+      },
+      "clueCardTitle": "Yellow Silicone Seal Cap",
+      "narrativeRevelation": "A discarded yellow silicone cap matches the industrial sealant used by Marcus Kane. Helena Shaw's copper-blue dye marker is absent.",
+      "eliminatedSuspectIds": ["suspect-a"]
+    },
+    {
+      "id": "beat-04",
+      "beatNumber": 4,
+      "title": "The Weathered Ground Plate",
+      "prompt": "Locate a stone paving, curb, or metallic ground cover fixture.",
+      "fieldInstruction": "Final beat. Phone away and scan the ground for an engineered stone or metal fixture.",
+      "targetPredicate": {
+        "id": "pred-04",
+        "name": "Ground Plate / Stone Marker",
+        "targetCategory": "stone_masonry",
+        "requiredDescriptors": ["stone", "flat"],
+        "optionalDescriptors": ["ground", "pavement", "curb", "plate", "marker"],
+        "minimumMatchScore": 0.5,
+        "safetyNotice": "Only observe objects in open, public, accessible areas. Never trespass."
+      },
+      "hintLevels": {
+        "level1": "Look down at the pavement edge, curbstone, or ground marker.",
+        "level2": "Search for flat stone masonry or an engineered paving border.",
+        "level3": "Inspect where the pathway stone meets the grass."
+      },
+      "clueCardTitle": "Commercial Boundary Stake",
+      "narrativeRevelation": "Driven into the ground under the grass is a commercial subdivision surveyor stake registered to Marcus Kane's development firm.",
+      "eliminatedSuspectIds": []
+    }
+  ],
+  "solutionNarrative": "Marcus Kane sabotaged the grove using industrial growth inhibitors so the protected environmental status would be revoked, enabling his development company to acquire the timberland for construction.",
+  "audioNarrationSummary": "Marcus Kane's surveyor prism marks and yellow chemical caps exposed his sabotage scheme to clear protected woodland for commercial development."
+}

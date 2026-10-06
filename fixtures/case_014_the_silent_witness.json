@@ -1,0 +1,150 @@
+{
+  "id": "case-014",
+  "caseNumber": "CASE 014",
+  "title": "The Silent Witness",
+  "tagline": "A missing timepiece. Three suspects. One impossible mark.",
+  "atmosphere": "Overcast morning, damp cobblestones, quiet park perimeter.",
+  "environmentType": "park_green",
+  "premise": "At 06:40 AM, an antique brass chronometer vanished from the estate adjacent to the municipal park. The only trace left behind was a set of erratic marks and a stained scrap of weather-treated canvas. Three individuals were seen near the perimeter.",
+  "estimatedMinutes": 25,
+  "difficulty": "3",
+  "suspects": [
+    {
+      "id": "suspect-a",
+      "name": "Evelyn Vance",
+      "occupation": "Botanical Groundskeeper",
+      "badgeTag": "WITNESS / SUSPECT A",
+      "avatarSymbol": "leaf",
+      "motive": "Bitter dispute over estate garden boundaries and stolen heirloom cuttings.",
+      "alibi": "Claims she was pruning weeping willows near the pond until 07:30 AM.",
+      "traits": ["Soil-stained gloves", "Carries bronze shears", "Wears canvas coat"],
+      "hiddenTrait": "Uses natural pine resin to seal hedge cuts, leaving distinct sticky amber residue.",
+      "eliminationClue": "The iron oxide scrape found at Beat 2 is completely incompatible with her soft brass tools."
+    },
+    {
+      "id": "suspect-b",
+      "name": "Arthur Pendelton",
+      "occupation": "Estate Watchman",
+      "badgeTag": "PRIMARY SUSPECT B",
+      "avatarSymbol": "shield",
+      "motive": "Severe unpaid gambling debts; was overheard asking antique dealers about antique chronometer valuations.",
+      "alibi": "Claims he stayed inside the brick guard shack monitoring the main gate.",
+      "traits": ["Heavy iron keyring", "Smokes cherry tobacco", "Limps with a heavy wooden cane"],
+      "hiddenTrait": "Transports contraband in a reinforced iron toolbox sealed with industrial vermilion red sealant.",
+      "eliminationClue": "None — all physical evidence links back to his equipment."
+    },
+    {
+      "id": "suspect-c",
+      "name": "Julian Mercer",
+      "occupation": "Clockmaker Apprentice",
+      "badgeTag": "PERSON OF INTEREST C",
+      "avatarSymbol": "watch",
+      "motive": "Desperately needed master craftsmanship gears to complete his guild masterwork submission.",
+      "alibi": "Claims he was walking his terrier along the outer paved sidewalk.",
+      "traits": ["Carries velvet-lined pouch", "Smells of mineral oil", "Clean polished shoes"],
+      "hiddenTrait": "Wears rubber-soled boots that leave no impression on damp dirt or grass.",
+      "eliminationClue": "Beat 3 proves the thief traversed deep rough soil, which Julian's spotless footwear contradicts."
+    }
+  ],
+  "culpritId": "suspect-b",
+  "beats": [
+    {
+      "id": "beat-01",
+      "beatNumber": 1,
+      "title": "The Boundary Marker",
+      "prompt": "Locate an outdoor perimeter fence, gate, or vertical stone/metal pillar.",
+      "fieldInstruction": "Pocket your phone. Walk along the edge of your open space until you encounter a boundary structure.",
+      "targetPredicate": {
+        "id": "pred-01",
+        "name": "Perimeter Boundary Structure",
+        "targetCategory": "architectural_boundary",
+        "requiredDescriptors": ["metal", "vertical"],
+        "optionalDescriptors": ["fence", "pillar", "gate", "stone", "boundary"],
+        "minimumMatchScore": 0.5,
+        "safetyNotice": "Only observe objects in open, public, accessible areas. Never trespass."
+      },
+      "hintLevels": {
+        "level1": "Look toward the boundary separating the open field from the path.",
+        "level2": "Search for an upright vertical post, railings, or gate support.",
+        "level3": "Inspect the edge of the paved path where metal or stone posts mark the perimeter."
+      },
+      "clueCardTitle": "Iron Gate Scratch Mark",
+      "narrativeRevelation": "A deep scrape along the perimeter post reveals red industrial paint flakes and forceful leverage, ruling out a quiet master key entry.",
+      "eliminatedSuspectIds": []
+    },
+    {
+      "id": "beat-02",
+      "beatNumber": 2,
+      "title": "The Weathered Texture",
+      "prompt": "Locate a weathered, rough, or rusted surface (stone wall, tree trunk, or oxidized metal).",
+      "fieldInstruction": "Put your phone away. Walk 40 paces forward and search for an aged, textured surface.",
+      "targetPredicate": {
+        "id": "pred-02",
+        "name": "Weathered Surface / Rust",
+        "targetCategory": "weathered_surface",
+        "requiredDescriptors": ["weathered", "rough"],
+        "optionalDescriptors": ["rust", "bark", "textured", "oxidized", "brick"],
+        "minimumMatchScore": 0.5,
+        "safetyNotice": "Only observe objects in open, public, accessible areas. Never trespass."
+      },
+      "hintLevels": {
+        "level1": "Inspect surfaces that have endured long exposure to sun and rain.",
+        "level2": "Look for peeling paint, aged bark, or dark rust streaks.",
+        "level3": "Examine the textured base of a light pole, park bench leg, or old wall."
+      },
+      "clueCardTitle": "Vermilion Paint Residue",
+      "narrativeRevelation": "The paint flakes match the specific industrial vermilion used on municipal maintenance toolboxes. Groundskeeper Evelyn uses only green wood preservative.",
+      "eliminatedSuspectIds": ["suspect-a"]
+    },
+    {
+      "id": "beat-03",
+      "beatNumber": 3,
+      "title": "The Organic Trail",
+      "prompt": "Locate a patch of open soil, damp grass, moss, or fallen leaf cluster.",
+      "fieldInstruction": "Phone in pocket. Follow a natural unpaved path or tree canopy edge.",
+      "targetPredicate": {
+        "id": "pred-03",
+        "name": "Organic Earth / Leaves",
+        "targetCategory": "organic_matter",
+        "requiredDescriptors": ["organic", "green"],
+        "optionalDescriptors": ["leaf", "soil", "grass", "moss", "earth", "nature"],
+        "minimumMatchScore": 0.5,
+        "safetyNotice": "Only observe objects in open, public, accessible areas. Never trespass."
+      },
+      "hintLevels": {
+        "level1": "Leave the hard pavement and observe the living ground beneath the trees.",
+        "level2": "Look for undisturbed vegetation or damp soil patches.",
+        "level3": "Check near the base of a tree or planted flower bed."
+      },
+      "clueCardTitle": "Deep Cane Indentation",
+      "narrativeRevelation": "A heavy circular impression pressed deep into the damp earth beside dragging footprints. Julian Mercer's lightweight gait and spotless footwear could not have created this track.",
+      "eliminatedSuspectIds": ["suspect-c"]
+    },
+    {
+      "id": "beat-04",
+      "beatNumber": 4,
+      "title": "The Metallic Casing",
+      "prompt": "Locate a distinct metallic fitting, bolt, manhole rim, or sign fastener.",
+      "fieldInstruction": "Final leg of the search. Put phone away and scan nearby fixtures for an engineered metal fastener.",
+      "targetPredicate": {
+        "id": "pred-04",
+        "name": "Engineered Metal Fastener",
+        "targetCategory": "metal_object",
+        "requiredDescriptors": ["metal", "circular"],
+        "optionalDescriptors": ["bolt", "fastener", "plate", "iron", "fixture"],
+        "minimumMatchScore": 0.5,
+        "safetyNotice": "Only observe objects in open, public, accessible areas. Never trespass."
+      },
+      "hintLevels": {
+        "level1": "Look low toward utility covers, sign posts, or bench brackets.",
+        "level2": "Search for circular metal hardware fastened into place.",
+        "level3": "Inspect the bolt fasteners anchoring a park sign or trash enclosure."
+      },
+      "clueCardTitle": "Stashed Chronometer Key",
+      "narrativeRevelation": "Wedged behind the metal bracket is the master winding key stamped with the Watchman's shift serial number. Arthur Pendelton's complicity is absolute.",
+      "eliminatedSuspectIds": []
+    }
+  ],
+  "solutionNarrative": "Arthur Pendelton used his heavy iron master key and maintenance toolbox to pry open the garden display case during his 06:40 AM patrol. He stashed the winding key behind the park sign bracket before limping back to the guard shack.",
+  "audioNarrationSummary": "The chronometer theft was an inside job. The vermilion paint flakes and deep cane indentation in the damp soil eliminate the groundskeeper and the apprentice, pointing directly to the watchman, Arthur Pendelton."
+}

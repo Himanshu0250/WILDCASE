@@ -1,0 +1,32 @@
+{
+  "name": "wildcase-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "WILDCASE - The world is the case file. An AI-powered outdoor mystery game.",
+  "scripts": {
+    "dev": "pnpm --parallel --filter @wildcase/api --filter @wildcase/web dev",
+    "dev:api": "pnpm --filter @wildcase/api dev",
+    "dev:web": "pnpm --filter @wildcase/web dev",
+    "build": "pnpm --filter @wildcase/core build && pnpm --filter @wildcase/ai build && pnpm --filter @wildcase/api build && pnpm --filter @wildcase/web build",
+    "test": "pnpm --recursive test",
+    "lint": "pnpm --recursive lint",
+    "typecheck": "pnpm --recursive typecheck",
+    "field-test": "node scripts/run-field-simulation.js"
+  },
+  "keywords": [
+    "wildcase",
+    "outdoor-game",
+    "ai",
+    "gemma",
+    "mastra",
+    "pwa",
+    "touch-grass",
+    "hacktoberfest"
+  ],
+  "author": "WILDCASE Engineering Team",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  }
+}

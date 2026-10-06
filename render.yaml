@@ -1,0 +1,39 @@
+services:
+  # WILDCASE Backend API Service
+  - type: web
+    name: wildcase-api
+    runtime: node
+    plan: free
+    region: oregon
+    buildCommand: pnpm install && pnpm --filter @wildcase/core build && pnpm --filter @wildcase/ai build && pnpm --filter @wildcase/api build
+    startCommand: node apps/api/dist/index.js
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 10000
+      - key: AUTO_START
+        value: "true"
+      - key: MONGODB_URI
+        sync: false
+      - key: GEMMA_API_KEY
+        sync: false
+      - key: ELEVENLABS_API_KEY
+        sync: false
+      - key: SENTRY_DSN
+        sync: false
+
+  # WILDCASE Web Frontend (Static Site)
+  - type: web
+    name: wildcase-web
+    runtime: static
+    buildCommand: pnpm install && pnpm --filter @wildcase/core build && pnpm --filter @wildcase/ai build && pnpm --filter @wildcase/web build
+    staticPublishPath: ./apps/web/dist
+    routes:
+      - type: rewrite
+        source: /api/*
+        destination: https://wildcase-api.onrender.com/api/*
+      - type: rewrite
+        source: /*
+        destination: /index.html

@@ -1,0 +1,150 @@
+{
+  "id": "case-007",
+  "caseNumber": "CASE 007",
+  "title": "The Iron Cipher",
+  "tagline": "An encrypted transmitter. A silent alleyway. A coded frequency.",
+  "atmosphere": "Dusk over brick alleyways, distant traffic drone, chill air.",
+  "environmentType": "urban_alley",
+  "premise": "A rogue broadcast node was detected intermittently pinging pirate frequencies from an urban commercial alleyway. The relay was concealed inside everyday city infrastructure.",
+  "estimatedMinutes": 30,
+  "difficulty": "4",
+  "suspects": [
+    {
+      "id": "suspect-a",
+      "name": "Darius Thorne",
+      "occupation": "Substation Electrician",
+      "badgeTag": "SUSPECT A",
+      "avatarSymbol": "zap",
+      "motive": "Selling unauthorized pirate mesh network bandwidth to black-market traders.",
+      "alibi": "Claims he was logging transformer voltages 3 blocks north all evening.",
+      "traits": ["Carries insulated multimeter", "Safety helmet with yellow tape", "Smells of ozone"],
+      "hiddenTrait": "Secures all personal splices with military-grade black vulcanized heat-shrink tubing.",
+      "eliminationClue": "None — his distinct black heat-shrink tubing is found anchoring the transmitter."
+    },
+    {
+      "id": "suspect-b",
+      "name": "Mara Lin",
+      "occupation": "Telecomm Fiber Splicer",
+      "badgeTag": "SUSPECT B",
+      "avatarSymbol": "radio",
+      "motive": "Protesting telecom infrastructure monopoly by building pirate repeater towers.",
+      "alibi": "Was on a live video conference with municipal zoning until 19:00.",
+      "traits": ["High-vis orange vest", "Carries laser cable identifier", "Wears microfiber gloves"],
+      "hiddenTrait": "Always labels splice junctions with numbered blue metallic foil tape.",
+      "eliminationClue": "Beat 2 proves the node used vulcanized rubber seal, not Mara's blue foil tape."
+    },
+    {
+      "id": "suspect-c",
+      "name": "Victor Rossi",
+      "occupation": "HVAC Contractor",
+      "badgeTag": "SUSPECT C",
+      "avatarSymbol": "wrench",
+      "motive": "Hired to tap building power feeds to run underground crypto mining rigs.",
+      "alibi": "Claims he was replacing fan bearings in the basement boiler room.",
+      "traits": ["Heavy tool belt", "Galvanized sheet metal screws in pocket", "Copper pipe cutter"],
+      "hiddenTrait": "Uses distinct silver mastic foil on all duct and wiring penetrations.",
+      "eliminationClue": "Beat 4 confirms high-frequency RF wiring spliced directly into high-voltage conduit, beyond Victor's standard low-voltage HVAC skills."
+    }
+  ],
+  "culpritId": "suspect-a",
+  "beats": [
+    {
+      "id": "beat-01",
+      "beatNumber": 1,
+      "title": "The Masonry Junction",
+      "prompt": "Locate an exposed brick, stone, or textured masonry wall in your vicinity.",
+      "fieldInstruction": "Pocket your device. Walk down your street or walkway until you find a textured masonry wall.",
+      "targetPredicate": {
+        "id": "pred-01",
+        "name": "Textured Masonry Surface",
+        "targetCategory": "stone_masonry",
+        "requiredDescriptors": ["stone", "textured"],
+        "optionalDescriptors": ["brick", "masonry", "wall", "rough", "mortar"],
+        "minimumMatchScore": 0.5,
+        "safetyNotice": "Only observe objects in open, public, accessible areas. Never trespass."
+      },
+      "hintLevels": {
+        "level1": "Look for brickwork or layered concrete blocks along the street edge.",
+        "level2": "Find a vertical wall where the texture of stone or mortar is clearly visible.",
+        "level3": "Inspect the lower half of an exterior brick or cinderblock facade."
+      },
+      "clueCardTitle": "Concealed Conduit Bracket",
+      "narrativeRevelation": "A fresh conduit bracket was drilled directly into the mortar line, drawing unauthorized current from the street line.",
+      "eliminatedSuspectIds": []
+    },
+    {
+      "id": "beat-02",
+      "beatNumber": 2,
+      "title": "The Weathered Seal",
+      "prompt": "Locate a dark, weathered seal, joint, or dark rubber/metal seam.",
+      "fieldInstruction": "Phone away. Look around utility conduits, drainpipes, or meter enclosures for dark weatherproofing.",
+      "targetPredicate": {
+        "id": "pred-02",
+        "name": "Vulcanized Weatherproof Seal",
+        "targetCategory": "weathered_surface",
+        "requiredDescriptors": ["weathered", "dark"],
+        "optionalDescriptors": ["black", "rubber", "seal", "joint", "tube"],
+        "minimumMatchScore": 0.5,
+        "safetyNotice": "Only observe objects in open, public, accessible areas. Never trespass."
+      },
+      "hintLevels": {
+        "level1": "Search for dark rubberized or oxidized joints around outdoor utility pipes.",
+        "level2": "Look for black heat-shrink or weather-proof seals on metal conduit.",
+        "level3": "Check where a vertical pipe meets a wall bracket or utility housing."
+      },
+      "clueCardTitle": "Substation-Grade Vulcanized Shrink",
+      "narrativeRevelation": "The waterproof seal on the junction is military-spec vulcanized rubber, standard issue only for Substation Electricians. Fiber splicer Mara Lin is ruled out.",
+      "eliminatedSuspectIds": ["suspect-b"]
+    },
+    {
+      "id": "beat-03",
+      "beatNumber": 3,
+      "title": "The Warning Signage",
+      "prompt": "Locate a public metal sign, street sign, warning marker, or typographic emblem.",
+      "fieldInstruction": "Pocket your phone. Walk 50 meters and locate an outdoor metal plate or signpost.",
+      "targetPredicate": {
+        "id": "pred-03",
+        "name": "Public Metal Sign / Marker",
+        "targetCategory": "signage_text",
+        "requiredDescriptors": ["metal", "sign"],
+        "optionalDescriptors": ["text", "yellow", "warning", "marker", "plate"],
+        "minimumMatchScore": 0.5,
+        "safetyNotice": "Only observe objects in open, public, accessible areas. Never trespass."
+      },
+      "hintLevels": {
+        "level1": "Scan for street name plates, parking signs, or municipal warning markers.",
+        "level2": "Look for high-contrast letters stamped on a painted metal plate.",
+        "level3": "Inspect the eye-level plate on a nearby pole or public utility box."
+      },
+      "clueCardTitle": "Magnetic Parasite Antenna",
+      "narrativeRevelation": "Affixed behind the metal sign is a micro magnetic coil antenna broadcasting pirate RF signals across the district.",
+      "eliminatedSuspectIds": []
+    },
+    {
+      "id": "beat-04",
+      "beatNumber": 4,
+      "title": "The Hardware Fastener",
+      "prompt": "Locate a circular metal bolt, locking latch, or industrial hinge.",
+      "fieldInstruction": "Final step. Phone away and inspect utility access fixtures for an engineered circular fastener.",
+      "targetPredicate": {
+        "id": "pred-04",
+        "name": "Industrial Locking Fastener",
+        "targetCategory": "metal_object",
+        "requiredDescriptors": ["metal", "circular"],
+        "optionalDescriptors": ["bolt", "latch", "hinge", "nut", "screw"],
+        "minimumMatchScore": 0.5,
+        "safetyNotice": "Only observe objects in open, public, accessible areas. Never trespass."
+      },
+      "hintLevels": {
+        "level1": "Look at the locking mechanism of a public fixture or metal access hatch.",
+        "level2": "Search for heavy steel bolt heads holding a metal enclosure in place.",
+        "level3": "Inspect the hinge or latch on a utility box along the wall."
+      },
+      "clueCardTitle": "High-Voltage Keyed Lock",
+      "narrativeRevelation": "The enclosure is secured with a high-voltage utility lock key that only certified substation staff possess. Victor Rossi lacks the clearances and keys.",
+      "eliminatedSuspectIds": ["suspect-c"]
+    }
+  ],
+  "solutionNarrative": "Darius Thorne tapped the municipal line using certified high-voltage gear and installed the pirate transmitter behind the sign using vulcanized rubber seals. His electrician credentials gave him sole access to the keyed utility lock.",
+  "audioNarrationSummary": "Darius Thorne turned the public electrical grid into his personal pirate relay. The vulcanized sealant and high-voltage lock conclusively identify him as the culprit."
+}
