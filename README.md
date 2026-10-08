@@ -131,5 +131,3 @@ WILDCASE processes all camera video frames locally in device memory. **Zero user
 
 ---
 
-##  License
-MIT © 2026 WILDCASE Contributors
